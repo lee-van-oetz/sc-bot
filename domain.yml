@@ -1,0 +1,54 @@
+intents:
+- help
+- urge_bad
+- urge_ok
+- tell_location
+- side_effect
+- affirm
+- reject
+
+
+entities:
+- location
+- side_effect
+
+
+slots:
+  location:
+    type: text
+  side_effect:
+    type: text
+
+
+actions:
+- utter_whatsup
+- utter_urge
+- utter_where
+- utter_any_side_effects
+- utter_good
+- action_side_effect
+- action_craving_tip
+
+templates:
+  utter_whatsup:
+  - text: "Hey, what's up?"
+  - text: "Hello, having a bad day?"
+  - text: "Hiya, is something up?"
+  utter_urge:
+  - text: "Feeling like smoking?"
+  - text: "Need a smoke badly?"
+  - text: "Aching for a fag?"
+  utter_where:
+  - text: "Where are you just now?"
+  - text: "Are you currently at work?"
+  - text: "Are you out?"
+  - text: "Can you tell me where you are just now?"
+  utter_good:
+  - text: "Glad to hear that!"
+  - text: "That's grand!"
+  utter_any_side_effects:
+  - text: "Any side effects you'd like to help with?"
+  - text: "Perhaps there some side effects I can advise on."
+  utter_side_effect_help:
+  - text: "This should not be utter action, but custom action pulling on from database based on {side_effect}[side effect]."
+
